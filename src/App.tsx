@@ -7,7 +7,6 @@ import { LiveCountdown } from './components/LiveCountdown';
 import { HaldiExperience } from './components/HaldiExperience';
 import { FamilyIntroduction } from './components/FamilyIntroduction';
 import { WeddingTimeline } from './components/WeddingTimeline';
-import { MandapamCinematicSection } from './components/MandapamCinematicSection';
 import { VenueAndQRSection } from './components/VenueAndQRSection';
 import { FinalBlessing } from './components/FinalBlessing';
 import { InvitationLightbox } from './components/InvitationLightbox';
@@ -81,12 +80,7 @@ export const App: React.FC = () => {
         {/* Section 5: Wedding Celebration Timeline */}
         <WeddingTimeline />
 
-        {/* Section 6: Photorealistic South Indian Wedding Mandapam Scene */}
-        <div id="mandapam-section">
-          <MandapamCinematicSection />
-        </div>
-
-        {/* Section 7: Venue and Original Scannable QR Code */}
+        {/* Section 6: Venue and Original Scannable QR Code */}
         <VenueAndQRSection
           onOpenInvitationModal={() => setIsLightboxOpen(true)}
         />

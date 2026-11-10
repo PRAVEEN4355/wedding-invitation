@@ -196,7 +196,7 @@ export const LiveCountdown: React.FC = () => {
 
             <div className="mt-6 pt-4 border-t border-[#C49A47]/30 text-center">
               <span className="text-xs text-[#6B3A48] font-sans tracking-wide font-medium">
-                Auspicious Mesham Lagnam • Mangalyadharanam between 4:30 AM – 6:00 AM
+                Auspicious Subha Lagnam • Mangalyadharanam between 4:30 AM – 6:00 AM
               </span>
             </div>
           </motion.div>

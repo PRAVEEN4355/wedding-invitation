@@ -24,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenSha
     { name: 'Haldi', href: '#haldi-section', icon: <Sparkles className="w-4 h-4 text-amber-500" /> },
     { name: 'Families', href: '#family-section', icon: <Users className="w-4 h-4 text-[#C49A47]" /> },
     { name: 'Timeline', href: '#events-section', icon: <Calendar className="w-4 h-4 text-[#C49A47]" /> },
-    { name: 'Mandapam', href: '#mandapam-section', icon: <Sparkles className="w-4 h-4 text-[#C49A47]" /> },
     { name: 'Venue & QR', href: '#venue-section', icon: <MapPin className="w-4 h-4 text-[#C49A47]" /> },
   ];
 
