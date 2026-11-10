@@ -28,10 +28,10 @@ function calculateCountdown(targetIsoDate: string, durationHours = 6): Countdown
 }
 
 // Single unit digit card in Light Gold / Ivory Theme with 3D Depth & Pulse
-const CountdownCard: React.FC<{ value: number; label: string; isSeconds?: boolean }> = ({ 
-  value, 
-  label, 
-  isSeconds = false 
+const CountdownCard: React.FC<{ value: number; label: string; isSeconds?: boolean }> = ({
+  value,
+  label,
+  isSeconds = false
 }) => {
   const formatted = String(Math.max(0, value)).padStart(2, '0');
 
@@ -42,11 +42,10 @@ const CountdownCard: React.FC<{ value: number; label: string; isSeconds?: boolea
         initial={isSeconds ? { scale: 0.94, opacity: 0.85 } : undefined}
         animate={isSeconds ? { scale: 1, opacity: 1 } : undefined}
         transition={{ duration: 0.25, ease: 'easeOut' }}
-        className={`relative w-14 sm:w-24 md:w-34 h-20 sm:h-32 md:h-40 rounded-xl sm:rounded-3xl bg-gradient-to-b from-white via-[#FFFDF7] to-[#FAF1DD] border-2 sm:border-[2.5px] ${
-          isSeconds 
-            ? 'border-[#C49A47] shadow-[0_8px_24px_rgba(245,206,54,0.35)] ring-1.5 sm:ring-2 ring-[#F5CE36]/30' 
+        className={`relative w-14 sm:w-24 md:w-34 h-20 sm:h-32 md:h-40 rounded-xl sm:rounded-3xl bg-gradient-to-b from-white via-[#FFFDF7] to-[#FAF1DD] border-2 sm:border-[2.5px] ${isSeconds
+            ? 'border-[#C49A47] shadow-[0_8px_24px_rgba(245,206,54,0.35)] ring-1.5 sm:ring-2 ring-[#F5CE36]/30'
             : 'border-[#C49A47] shadow-[0_8px_20px_rgba(104,28,50,0.1)]'
-        } flex flex-col items-center justify-center overflow-hidden group hover:scale-105 hover:border-[#8C6721] transition-all duration-300`}
+          } flex flex-col items-center justify-center overflow-hidden group hover:scale-105 hover:border-[#8C6721] transition-all duration-300`}
       >
         {/* Top Glass Reflection Layer */}
         <div className="absolute top-0 inset-x-0 h-1/2 bg-white/70 border-b border-[#C49A47]/20 pointer-events-none" />
@@ -132,7 +131,7 @@ export const LiveCountdown: React.FC = () => {
 
             <div className="flex flex-col items-center sm:items-end">
               <span className="text-xs sm:text-sm font-serif text-[#380E1B] font-bold">Friday, 20 November 2026</span>
-              <span className="text-[11px] sm:text-xs font-sans text-[#8C6721] font-semibold">4:30 AM – 6:00 AM (Mesham Lagnam)</span>
+              <span className="text-[11px] sm:text-xs font-sans text-[#8C6721] font-semibold">4:30 AM – 6:00 AM (Subha Lagnam)</span>
             </div>
           </div>
 
