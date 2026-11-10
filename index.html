@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Marcellus&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Rozha+One&display=swap" rel="stylesheet">
 
-    <!-- Hide Netlify Badge & Drawer -->
+    <!-- Completely Hide and Purge Netlify Badge & Drawer -->
     <style>
       netlify-drawer,
       #netlify-drawer,
@@ -36,7 +36,8 @@
       [id*="netlify"],
       [class*="netlify"],
       iframe[src*="netlify"],
-      iframe[id*="netlify"] {
+      iframe[id*="netlify"],
+      div[data-netlify-drawer] {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -44,9 +45,56 @@
         width: 0 !important;
         height: 0 !important;
         position: absolute !important;
-        left: -9999px !important;
+        left: -99999px !important;
+        top: -99999px !important;
+        z-index: -99999 !important;
       }
     </style>
+    <script>
+      (function() {
+        function removeNetlifyElements() {
+          const selectors = [
+            'netlify-drawer', '#netlify-drawer', '[data-netlify-drawer]', 
+            '[id*="netlify"]', '[class*="netlify"]', 'iframe[src*="netlify"]',
+            'iframe[id*="netlify"]', 'div[data-netlify-drawer]'
+          ];
+          selectors.forEach(function(sel) {
+            document.querySelectorAll(sel).forEach(function(el) {
+              try { el.remove(); } catch(e) {}
+            });
+          });
+
+          // Check all buttons/divs for "Powered by Netlify"
+          const allEls = document.querySelectorAll('button, a, div, span');
+          for (var i = 0; i < allEls.length; i++) {
+            var el = allEls[i];
+            if (el.textContent && el.textContent.indexOf('Powered by Netlify') !== -1) {
+              try {
+                var container = el.closest('[id*="netlify"]') || el.closest('[class*="netlify"]') || el;
+                container.remove();
+              } catch(e) {}
+            }
+          }
+        }
+
+        removeNetlifyElements();
+        window.addEventListener('DOMContentLoaded', removeNetlifyElements);
+        window.addEventListener('load', removeNetlifyElements);
+
+        if (typeof MutationObserver !== 'undefined') {
+          var observer = new MutationObserver(function() {
+            removeNetlifyElements();
+          });
+          observer.observe(document.documentElement, {
+            childList: true,
+            subtree: true
+          });
+        }
+
+        var interval = setInterval(removeNetlifyElements, 300);
+        setTimeout(function() { clearInterval(interval); }, 15000);
+      })();
+    </script>
   </head>
   <body class="bg-[#FFFDF7] text-[#3D141F] overflow-x-hidden antialiased selection:bg-[#C49A47] selection:text-white">
     <div id="root"></div>

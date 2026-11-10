@@ -10,7 +10,6 @@ import { WeddingTimeline } from './components/WeddingTimeline';
 import { MandapamCinematicSection } from './components/MandapamCinematicSection';
 import { VenueAndQRSection } from './components/VenueAndQRSection';
 import { FinalBlessing } from './components/FinalBlessing';
-import { FloatingMusicPlayer } from './components/FloatingMusicPlayer';
 import { InvitationLightbox } from './components/InvitationLightbox';
 import { FloatingPetals } from './components/common/FloatingPetals';
 import { RoyalTemple3DBackground } from './components/3d/RoyalTemple3DBackground';
@@ -81,9 +80,6 @@ export const App: React.FC = () => {
         {/* Section 8: Final Blessing and Auspicious Farewell */}
         <FinalBlessing />
       </main>
-
-      {/* Floating Tamil Movie Wedding BGM Music Controller */}
-      <FloatingMusicPlayer />
 
       {/* High-Resolution Original Invitation Lightbox Modal */}
       <InvitationLightbox
