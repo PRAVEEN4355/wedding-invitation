@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TempleBell } from './common/DecorativeOrnaments';
 import { weddingAudio } from '../utils/audioEngine';
+import { getGuestNameFromUrl } from '../utils/guestManager';
 import confetti from 'canvas-confetti';
 
 interface OpeningTempleDoorProps {
@@ -11,6 +12,7 @@ interface OpeningTempleDoorProps {
 export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
+  const guestName = useMemo(() => getGuestNameFromUrl(), []);
 
   const handleOpenInvitation = () => {
     if (isOpening) return;
@@ -33,6 +35,12 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
     setTimeout(() => {
       setIsOpen(true);
       onOpen();
+      // Ensure landing starting right at the top of the invitation
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      const hero = document.getElementById('hero-section');
+      if (hero) {
+        hero.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
     }, 2200);
   };
 
@@ -171,6 +179,23 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               isOpening ? 'scale-110 opacity-0 transition-all duration-1000' : ''
             }`}
           >
+            {/* Personalized Guest Badge */}
+            {guestName ? (
+              <div className="mb-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#FFF5DA] via-[#FFE8B3] to-[#FFF5DA] border border-[#C49A47] text-[#681C32] inline-flex items-center space-x-1.5 shadow-xs">
+                <span>🌸</span>
+                <span className="font-serif text-xs font-bold uppercase tracking-wider text-[#8C6721]">
+                  Special Invitation for: <span className="text-[#681C32] font-rozha text-xs sm:text-sm font-black capitalize ml-1">{guestName}</span>
+                </span>
+                <span>🌸</span>
+              </div>
+            ) : (
+              <div className="mb-2 px-3 py-1 rounded-full bg-[#FFF5DA] border border-[#C49A47]/60 text-[#681C32] inline-flex items-center space-x-1 shadow-2xs">
+                <span className="font-serif text-[11px] font-bold uppercase tracking-wider text-[#8C6721]">
+                  Warmly Welcoming You & Your Family
+                </span>
+              </div>
+            )}
+
             {/* Top Invocation from Official Card */}
             <p className="font-rozha text-[#681C32] tracking-widest text-sm sm:text-lg mb-1 font-bold drop-shadow-sm">
               || Sri Veeragaran Angalamman Thunai ||

@@ -11,12 +11,23 @@ import { MandapamCinematicSection } from './components/MandapamCinematicSection'
 import { VenueAndQRSection } from './components/VenueAndQRSection';
 import { FinalBlessing } from './components/FinalBlessing';
 import { InvitationLightbox } from './components/InvitationLightbox';
+import { ShareInviteModal } from './components/ShareInviteModal';
 import { FloatingPetals } from './components/common/FloatingPetals';
 import { RoyalTemple3DBackground } from './components/3d/RoyalTemple3DBackground';
 
 export const App: React.FC = () => {
   const [invitationOpened, setInvitationOpened] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+
+  const handleDoorOpen = () => {
+    setInvitationOpened(true);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    const heroEl = document.getElementById('hero-section');
+    if (heroEl) {
+      heroEl.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
+  };
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -29,7 +40,7 @@ export const App: React.FC = () => {
     <div className="relative min-h-screen bg-[#FFFDF7] text-[#3D141F] font-sans selection:bg-[#C49A47] selection:text-white">
       {/* 1. Opening Fullscreen Golden Temple Door Experience */}
       {!invitationOpened && (
-        <OpeningTempleDoor onOpen={() => setInvitationOpened(true)} />
+        <OpeningTempleDoor onOpen={handleDoorOpen} />
       )}
 
       {/* 2. Light Theme 3D Floating Petals & Gold Sparkles Background */}
@@ -42,7 +53,10 @@ export const App: React.FC = () => {
       <ScrollProgress />
 
       {/* Floating Header Navbar */}
-      <Navbar onOpenInvitationModal={() => setIsLightboxOpen(true)} />
+      <Navbar 
+        onOpenInvitationModal={() => setIsLightboxOpen(true)} 
+        onOpenShareModal={() => setIsShareModalOpen(true)} 
+      />
 
       {/* Main Content Sections */}
       <main className="relative z-10">
@@ -85,6 +99,12 @@ export const App: React.FC = () => {
       <InvitationLightbox
         isOpen={isLightboxOpen}
         onClose={() => setIsLightboxOpen(false)}
+      />
+
+      {/* Share / WhatsApp Invite Link Generator Modal */}
+      <ShareInviteModal
+        isOpen={isShareModalOpen}
+        onClose={() => setIsShareModalOpen(false)}
       />
     </div>
   );

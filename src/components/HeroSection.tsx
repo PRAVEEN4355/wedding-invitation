@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { WEDDING_DATA } from '../config/weddingData';
-import { MangoLeafToran, FlowerGarland, KolamPattern, GoldCornerAccents } from './common/DecorativeOrnaments';
+import { FlowerGarland, KolamPattern, GoldCornerAccents } from './common/DecorativeOrnaments';
+import { getGuestNameFromUrl } from '../utils/guestManager';
 import { Calendar, MapPin, Heart, Sparkles } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -15,15 +16,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onScrollToVenue,
   onOpenInvitationModal,
 }) => {
+  const guestName = useMemo(() => getGuestNameFromUrl(), []);
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-gradient-to-b from-[#FFFDF7] via-[#FAF4EA] to-[#F5ECE0] text-[#3D141F] pt-20 sm:pt-24 pb-10 px-4 sm:px-6">
+    <section id="hero-section" className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-gradient-to-b from-[#FFFDF7] via-[#FAF4EA] to-[#F5ECE0] text-[#3D141F] pt-20 sm:pt-24 pb-10 px-4 sm:px-6">
       {/* Kolam Pattern for Light Theme */}
       <KolamPattern opacity="opacity-20" />
 
-      {/* Top Thoranam & Garland */}
+      {/* Top Personalized Guest Welcome Banner & Garland */}
       <div className="w-full relative z-20 flex flex-col items-center">
-        <MangoLeafToran />
-        <FlowerGarland className="opacity-95 -mt-1" />
+        {/* Personalized Guest Invitation Banner right at the top */}
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="my-1.5 px-5 py-2 sm:px-7 sm:py-2.5 rounded-full bg-gradient-to-r from-[#FFF5DA] via-[#FFE8B3] to-[#FFF5DA] border-2 border-[#C49A47] text-[#681C32] shadow-md inline-flex items-center space-x-2"
+        >
+          <span className="text-base sm:text-lg">🌸</span>
+          <span className="font-serif text-xs sm:text-sm tracking-wider uppercase font-bold text-[#8C6721]">
+            {guestName ? (
+              <>
+                Special Invitation For: <span className="font-rozha text-[#681C32] font-black text-sm sm:text-base capitalize ml-1">{guestName}</span>
+              </>
+            ) : (
+              <>
+                Warmly Welcoming <span className="font-rozha text-[#681C32] font-black text-sm sm:text-base ml-1">You & Your Family</span>
+              </>
+            )}
+          </span>
+          <span className="text-base sm:text-lg">🌸</span>
+        </motion.div>
+
+        <FlowerGarland className="opacity-95 -mt-0.5" />
       </div>
 
       {/* Main Center Content Box */}

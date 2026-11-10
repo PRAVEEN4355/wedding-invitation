@@ -4,9 +4,10 @@ import { Menu, X, Heart, Calendar, MapPin, Users, Sparkles, Image as ImageIcon, 
 
 interface NavbarProps {
   onOpenInvitationModal: () => void;
+  onOpenShareModal?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenShareModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -77,10 +78,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal }) => {
             <ImageIcon className="w-3.5 h-3.5 text-[#C49A47]" />
             <span>Invitation Card</span>
           </button>
+
+          {onOpenShareModal && (
+            <button
+              onClick={onOpenShareModal}
+              className="px-3.5 py-2 rounded-full bg-gradient-to-r from-[#681C32] to-[#8C2242] text-white hover:brightness-110 font-serif text-xs font-bold transition-all flex items-center space-x-1.5 cursor-pointer shadow-xs border border-[#C49A47]"
+              title="Create personalized invite link for WhatsApp"
+            >
+              <span>💌</span>
+              <span>Invite Relative</span>
+            </button>
+          )}
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-3 lg:hidden">
+        <div className="flex items-center space-x-2.5 lg:hidden">
+          {onOpenShareModal && (
+            <button
+              onClick={onOpenShareModal}
+              className="p-2 rounded-full bg-[#681C32] border border-[#C49A47] text-white text-xs font-serif shadow-xs"
+              title="Personalize WhatsApp Invite"
+            >
+              💌
+            </button>
+          )}
+
           <button
             onClick={onOpenInvitationModal}
             className="p-2 rounded-full bg-[#FFF5DA] border border-[#C49A47] text-[#681C32] text-xs font-serif"
