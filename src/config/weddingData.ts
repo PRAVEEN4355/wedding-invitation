@@ -37,7 +37,7 @@ export const WEDDING_DATA = {
   },
 
   venue: {
-    name: "Sri Kalyana Mandapam",
+    name: "SRL Kalyana Mandapam",
     fullName: "SRL Kalyana Mandapam",
     address: "Thirupathi Road, Venkatagiri",
     city: "Venkatagiri, Andhra Pradesh",

@@ -155,7 +155,7 @@ export const HaldiExperience: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-amber-800 font-sans font-bold block">Venue</span>
-                  <span className="font-serif font-bold text-sm sm:text-base text-[#422405]">Sri Kalyana Mandapam, Venkatagiri</span>
+                  <span className="font-serif font-bold text-sm sm:text-base text-[#422405]">SRL Kalyana Mandapam, Venkatagiri</span>
                 </div>
               </div>
             </div>

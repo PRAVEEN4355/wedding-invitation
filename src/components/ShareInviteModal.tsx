@@ -139,3 +139,4 @@ export const ShareInviteModal: React.FC<ShareInviteModalProps> = ({ isOpen, onCl
     </AnimatePresence>
   );
 };
+

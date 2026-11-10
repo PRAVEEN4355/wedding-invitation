@@ -39,7 +39,7 @@ export const VenueAndQRSection: React.FC<VenueAndQRSectionProps> = ({ onOpenInvi
             Wedding Venue & Location
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#6B3A48] max-w-xl mx-auto mt-2 tracking-wide font-medium">
-            Find your way easily to Sri Kalyana Mandapam, Venkatagiri with direct Google Maps guidance
+            Find your way easily to SRL Kalyana Mandapam, Venkatagiri with direct Google Maps guidance
           </p>
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#C49A47] to-transparent mx-auto mt-4" />
         </div>
@@ -129,7 +129,7 @@ export const VenueAndQRSection: React.FC<VenueAndQRSectionProps> = ({ onOpenInvi
             <div className="relative p-4 bg-white rounded-2xl shadow-md border-4 border-[#F3DB98] max-w-[260px] w-full aspect-square flex items-center justify-center my-2">
               <img
                 src={venue.qrImagePath}
-                alt="Original Scannable Wedding Venue QR Code - Sri Kalyana Mandapam, Venkatagiri"
+                alt="Original Scannable Wedding Venue QR Code - SRL Kalyana Mandapam, Venkatagiri"
                 className="w-full h-full object-contain select-none"
                 style={{ imageRendering: 'pixelated' }}
                 loading="eager"

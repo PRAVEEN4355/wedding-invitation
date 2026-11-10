@@ -36,7 +36,7 @@ export const MandapamCinematicSection: React.FC = () => {
           </h2>
 
           <p className="font-serif italic text-base sm:text-lg text-[#6B3A48] max-w-2xl mx-auto mt-2 font-medium">
-            Illuminated with traditional brass Kuthu Vilakku flames and blessed by sacred Vedic mantras at Sri Kalyana Mandapam
+            Illuminated with traditional brass Kuthu Vilakku flames and blessed by sacred Vedic mantras at SRL Kalyana Mandapam
           </p>
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#C49A47] to-transparent mx-auto mt-4" />
         </motion.div>
@@ -159,7 +159,7 @@ export const MandapamCinematicSection: React.FC = () => {
                     <div className="px-4 py-1.5 rounded-full bg-white/95 border border-[#C49A47] shadow-md flex items-center space-x-2 backdrop-blur-md">
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping" />
                       <span className="font-serif text-xs font-bold text-[#681C32] tracking-wide">
-                        Sri Kalyana Mandapam, Venkatagiri
+                        SRL Kalyana Mandapam, Venkatagiri
                       </span>
                     </div>
                   </div>

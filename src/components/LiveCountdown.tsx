@@ -180,7 +180,7 @@ export const LiveCountdown: React.FC = () => {
               <div className="py-8 text-center bg-[#FFF5DA] rounded-2xl border border-[#C49A47] animate-pulse">
                 <Sparkles className="w-10 h-10 text-[#C49A47] mx-auto mb-2" />
                 <h4 className="font-rozha text-xl text-[#681C32] font-bold">The celebration has begun!</h4>
-                <p className="text-xs text-[#5A2C18] mt-1 font-semibold">Kalyana Muhurtham is now underway at Sri Kalyana Mandapam!</p>
+                <p className="text-xs text-[#5A2C18] mt-1 font-semibold">Kalyana Muhurtham is now underway at SRL Kalyana Mandapam!</p>
               </div>
             ) : (
               <div className="flex justify-around items-center py-4">
