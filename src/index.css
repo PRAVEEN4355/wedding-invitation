@@ -29,6 +29,24 @@
   }
 }
 
+/* Force hide Netlify Drawer & badges */
+netlify-drawer,
+#netlify-drawer,
+[data-netlify-drawer],
+[id*="netlify"],
+[class*="netlify"],
+iframe[src*="netlify"],
+iframe[id*="netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   * {
