@@ -102,27 +102,27 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               />
               <div className="absolute inset-0 bg-gradient-to-r from-amber-950/40 via-amber-900/20 to-black/50" />
 
-              {/* Ornate Inset Panel: Lord Ganesha Blessing (Visible on Tablets & Desktops) */}
-              <div className="hidden sm:flex absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
-                <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md -translate-x-3 sm:-translate-x-8 lg:-translate-x-14">
+              {/* Ornate Inset Panel: Lord Ganesha Blessing */}
+              <div className="flex absolute inset-2 sm:inset-8 lg:inset-10 border sm:border-2 border-[#E5C058]/80 rounded-lg flex-col justify-between items-center p-2 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
+                <div className="px-2 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-[9px] sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md -translate-x-1 sm:-translate-x-8 lg:-translate-x-14">
                   卐 Sri Maha Ganapathi 卐
                 </div>
 
-                {/* 3D Golden Ganesha 3D Logo (Shifted to Left for Center Card Clearance) */}
-                <div className="relative my-auto flex flex-col items-center -translate-x-4 sm:-translate-x-10 md:-translate-x-14 lg:-translate-x-20 transition-transform">
-                  <div className="w-26 h-26 sm:w-38 sm:h-38 md:w-44 md:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
+                {/* 3D Golden Ganesha 3D Logo */}
+                <div className="relative my-auto flex flex-col items-center -translate-x-2 sm:-translate-x-10 md:-translate-x-14 lg:-translate-x-20 transition-transform">
+                  <div className="w-16 h-16 sm:w-38 sm:h-38 md:w-44 md:h-44 rounded-full p-1 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_25px_rgba(245,206,54,0.45)] border sm:border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
                     <img
                       src="/images/divine_ganesha_relief.jpg"
                       alt="Lord Ganesha 3D"
                       className="w-full h-full object-cover rounded-full filter brightness-105"
                     />
                   </div>
-                  <span className="mt-3 px-4 py-1 rounded-full bg-amber-950/85 border border-amber-500/50 text-[#F5CE36] text-[11px] sm:text-xs font-serif uppercase tracking-widest font-bold shadow-md">
+                  <span className="mt-1.5 sm:mt-3 px-2 sm:px-4 py-0.5 sm:py-1 rounded-full bg-amber-950/85 border border-amber-500/50 text-[#F5CE36] text-[9px] sm:text-xs font-serif uppercase tracking-widest font-bold shadow-md">
                     Subham
                   </span>
                 </div>
 
-                <div className="text-[11px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center -translate-x-3 sm:-translate-x-8 lg:-translate-x-14">
+                <div className="text-[9px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center -translate-x-1 sm:-translate-x-8 lg:-translate-x-14">
                   Auspicious Beginnings
                 </div>
               </div>
@@ -143,27 +143,27 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               />
               <div className="absolute inset-0 bg-gradient-to-l from-amber-950/40 via-amber-900/20 to-black/50" />
 
-              {/* Ornate Inset Panel: Lord Murugan Blessing (Visible on Tablets & Desktops) */}
-              <div className="hidden sm:flex absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
-                <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md translate-x-3 sm:translate-x-8 lg:translate-x-14">
+              {/* Ornate Inset Panel: Lord Murugan Blessing */}
+              <div className="flex absolute inset-2 sm:inset-8 lg:inset-10 border sm:border-2 border-[#E5C058]/80 rounded-lg flex-col justify-between items-center p-2 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
+                <div className="px-2 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-[9px] sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md translate-x-1 sm:translate-x-8 lg:translate-x-14">
                   ✨ Sri Subramanya Swamy ✨
                 </div>
 
-                {/* 3D Golden Murugan 3D Logo (Shifted to Right for Center Card Clearance) */}
-                <div className="relative my-auto flex flex-col items-center translate-x-4 sm:translate-x-10 md:translate-x-14 lg:translate-x-20 transition-transform">
-                  <div className="w-26 h-26 sm:w-38 sm:h-38 md:w-44 md:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
+                {/* 3D Golden Murugan 3D Logo */}
+                <div className="relative my-auto flex flex-col items-center translate-x-2 sm:translate-x-10 md:translate-x-14 lg:translate-x-20 transition-transform">
+                  <div className="w-16 h-16 sm:w-38 sm:h-38 md:w-44 md:h-44 rounded-full p-1 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_25px_rgba(245,206,54,0.45)] border sm:border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
                     <img
                       src="/images/divine_murugan_relief.jpg"
                       alt="Lord Murugan 3D"
                       className="w-full h-full object-cover rounded-full filter brightness-105"
                     />
                   </div>
-                  <span className="mt-3 px-4 py-1 rounded-full bg-amber-950/85 border border-amber-500/50 text-[#F5CE36] text-[11px] sm:text-xs font-serif uppercase tracking-widest font-bold shadow-md">
+                  <span className="mt-1.5 sm:mt-3 px-2 sm:px-4 py-0.5 sm:py-1 rounded-full bg-amber-950/85 border border-amber-500/50 text-[#F5CE36] text-[9px] sm:text-xs font-serif uppercase tracking-widest font-bold shadow-md">
                     Kalyanam
                   </span>
                 </div>
 
-                <div className="text-[11px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center translate-x-3 sm:translate-x-8 lg:translate-x-14">
+                <div className="text-[9px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center translate-x-1 sm:translate-x-8 lg:translate-x-14">
                   Divine Eternal Grace
                 </div>
               </div>
@@ -201,7 +201,28 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               || Sri Veeragaran Angalamman Thunai ||
             </p>
 
-            <p className="text-[#5A2C18] text-[11px] sm:text-xs md:text-sm font-sans mb-2 tracking-wider font-semibold">
+            {/* Divine Blessings of Lord Ganesha & Lord Murugan 3D Logos */}
+            <div className="flex items-center justify-center space-x-2.5 sm:space-x-3.5 my-1.5 sm:my-2">
+              <div className="flex items-center space-x-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#FFF5DA] border border-[#C49A47] shadow-2xs">
+                <img
+                  src="/images/divine_ganesha_relief.jpg"
+                  alt="Lord Ganesha"
+                  className="w-4 h-4 sm:w-5 sm:h-5 rounded-full object-cover border border-[#C49A47]"
+                />
+                <span className="font-serif text-[10px] sm:text-xs font-bold text-[#681C32] tracking-wider">Lord Ganesha</span>
+              </div>
+              <span className="text-[#C49A47] text-xs font-serif font-black">•</span>
+              <div className="flex items-center space-x-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#FFF5DA] border border-[#C49A47] shadow-2xs">
+                <img
+                  src="/images/divine_murugan_relief.jpg"
+                  alt="Lord Murugan"
+                  className="w-4 h-4 sm:w-5 sm:h-5 rounded-full object-cover border border-[#C49A47]"
+                />
+                <span className="font-serif text-[10px] sm:text-xs font-bold text-[#681C32] tracking-wider">Lord Murugan</span>
+              </div>
+            </div>
+
+            <p className="text-[#5A2C18] text-[10px] sm:text-xs md:text-sm font-sans mb-1.5 sm:mb-2 tracking-wider font-semibold">
               With the blessings of our families
             </p>
 

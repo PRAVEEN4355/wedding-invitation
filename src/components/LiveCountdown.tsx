@@ -131,10 +131,6 @@ export const LiveCountdown: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center sm:items-end">
-              <div className="flex items-center space-x-1.5 mb-1 px-3 py-0.5 sm:py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-bold uppercase tracking-wider shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                <span>Live Ticking</span>
-              </div>
               <span className="text-xs sm:text-sm font-serif text-[#380E1B] font-bold">Friday, 20 November 2026</span>
               <span className="text-[11px] sm:text-xs font-sans text-[#8C6721] font-semibold">4:30 AM – 6:00 AM (Mesham Lagnam)</span>
             </div>
