@@ -51,19 +51,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Main Center Content Box */}
-      <div className="relative z-20 w-full max-w-4xl my-auto text-center flex flex-col items-center py-6">
+      <div className="relative z-20 w-full max-w-2xl my-2 text-center flex flex-col items-center py-2">
         {/* Sacred Invocation Mantra */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-[#FFF5DA] border border-[#C49A47] text-[#681C32] mb-3 shadow-sm"
+          className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#FFF5DA] border border-[#C49A47] text-[#681C32] mb-2.5 shadow-2xs"
         >
-          <Sparkles className="w-4 h-4 text-[#C49A47] animate-spin" style={{ animationDuration: '8s' }} />
-          <span className="font-rozha text-xs sm:text-base tracking-widest font-bold">
+          <Sparkles className="w-3.5 h-3.5 text-[#C49A47] animate-spin" style={{ animationDuration: '8s' }} />
+          <span className="font-rozha text-xs sm:text-sm tracking-widest font-bold">
             {WEDDING_DATA.couple.blessingInvocation}
           </span>
-          <Sparkles className="w-4 h-4 text-[#C49A47] animate-spin" style={{ animationDuration: '8s' }} />
+          <Sparkles className="w-3.5 h-3.5 text-[#C49A47] animate-spin" style={{ animationDuration: '8s' }} />
         </motion.div>
 
         {/* Divine Blessings of Lord Ganesha & Lord Murugan with 3D Logos */}
@@ -71,24 +71,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-center justify-center space-x-3 sm:space-x-6 mb-4"
+          className="flex items-center justify-center space-x-3 sm:space-x-4 mb-2.5"
         >
-          <div className="flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#C49A47] shadow-xs">
+          <div className="flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#C49A47] shadow-2xs">
             <img
               src="/images/divine_ganesha_relief.jpg"
               alt="Lord Ganesha"
-              className="w-6 h-6 rounded-full object-cover border border-[#C49A47]"
+              className="w-5 h-5 rounded-full object-cover border border-[#C49A47]"
             />
-            <span className="font-serif text-xs font-bold text-[#681C32] tracking-wider">Lord Ganesha</span>
+            <span className="font-serif text-[11px] font-bold text-[#681C32] tracking-wider">Lord Ganesha</span>
           </div>
           <span className="text-[#C49A47] text-xs font-serif font-black">•</span>
-          <div className="flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#C49A47] shadow-xs">
+          <div className="flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#C49A47] shadow-2xs">
             <img
               src="/images/divine_murugan_relief.jpg"
               alt="Lord Murugan"
-              className="w-6 h-6 rounded-full object-cover border border-[#C49A47]"
+              className="w-5 h-5 rounded-full object-cover border border-[#C49A47]"
             />
-            <span className="font-serif text-xs font-bold text-[#681C32] tracking-wider">Lord Murugan</span>
+            <span className="font-serif text-[11px] font-bold text-[#681C32] tracking-wider">Lord Murugan</span>
           </div>
         </motion.div>
 
@@ -96,68 +96,68 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-[#6B3A48] text-xs sm:text-sm uppercase tracking-[0.25em] font-sans font-semibold mb-3"
+          className="text-[#6B3A48] text-[11px] sm:text-xs uppercase tracking-[0.2em] font-sans font-semibold mb-2.5"
         >
           {WEDDING_DATA.couple.invitationGreeting}
         </motion.p>
 
-        {/* Grand Royal Couple Card in Light Theme with Gold Foil Ornamental Borders */}
+        {/* Compact & Beautiful Royal Couple Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="relative w-full max-w-3xl p-6 sm:p-12 rounded-3xl bg-white/90 border-2 border-[#C49A47] shadow-[0_20px_60px_rgba(104,28,50,0.12)] backdrop-blur-md"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="relative w-full max-w-lg sm:max-w-xl md:max-w-2xl p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_12px_35px_rgba(104,28,50,0.1)] backdrop-blur-md"
         >
           <GoldCornerAccents />
 
           {/* Groom Name */}
-          <div className="flex flex-col items-center mb-1">
-            <span className="font-script text-2xl sm:text-3xl text-[#9A6F25] tracking-wide">
+          <div className="flex flex-col items-center">
+            <span className="font-script text-lg sm:text-2xl text-[#9A6F25] tracking-wide">
               Chi.
             </span>
-            <h1 className="font-rozha text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-wider text-[#681C32] drop-shadow-sm">
+            <h1 className="font-rozha text-2xl sm:text-4xl md:text-5xl font-black tracking-wider text-[#681C32] drop-shadow-xs">
               PRAVEEN
             </h1>
-            <span className="text-[#8C6721] text-xs sm:text-sm font-serif tracking-widest font-semibold mt-1">
+            <span className="text-[#8C6721] text-[10px] sm:text-xs font-serif tracking-widest font-semibold mt-0.5">
               B.Tech.
             </span>
           </div>
 
           {/* Connecting Sacred Mangalyam Knot & Heart */}
-          <div className="flex items-center justify-center my-3 sm:my-5">
-            <div className="h-px w-16 sm:w-28 bg-[#C49A47]" />
+          <div className="flex items-center justify-center my-2 sm:my-2.5">
+            <div className="h-px w-10 sm:w-16 bg-[#C49A47]" />
             <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
+              animate={{ scale: [1, 1.15, 1] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              className="mx-4 p-3 rounded-full bg-[#FFF5DA] border-2 border-[#C49A47] shadow-md flex items-center justify-center"
+              className="mx-3 p-1.5 rounded-full bg-[#FFF5DA] border border-[#C49A47] shadow-xs flex items-center justify-center"
             >
-              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 fill-rose-600" />
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-rose-600 fill-rose-600" />
             </motion.div>
-            <div className="h-px w-16 sm:w-28 bg-[#C49A47]" />
+            <div className="h-px w-10 sm:w-16 bg-[#C49A47]" />
           </div>
 
           {/* Bride Name */}
-          <div className="flex flex-col items-center mt-1">
-            <span className="font-script text-2xl sm:text-3xl text-[#9A6F25] tracking-wide">
+          <div className="flex flex-col items-center">
+            <span className="font-script text-lg sm:text-2xl text-[#9A6F25] tracking-wide">
               Chi. Sou.
             </span>
-            <h2 className="font-rozha text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-wider text-[#681C32] drop-shadow-sm">
+            <h2 className="font-rozha text-xl sm:text-3xl md:text-4xl font-black tracking-wider text-[#681C32] drop-shadow-xs">
               LAKSHMI PRASANNA
             </h2>
-            <div className="flex items-center space-x-2 mt-1">
-              <span className="text-[#6B3A48] text-xs sm:text-sm font-serif italic">
+            <div className="flex items-center space-x-1.5 mt-0.5">
+              <span className="text-[#6B3A48] text-[10px] sm:text-xs font-serif italic">
                 (Prasanna Lakshmi)
               </span>
-              <span className="text-[#C49A47]">•</span>
-              <span className="text-[#8C6721] text-xs sm:text-sm font-serif tracking-widest font-semibold">
+              <span className="text-[#C49A47] text-xs">•</span>
+              <span className="text-[#8C6721] text-[10px] sm:text-xs font-serif tracking-widest font-semibold">
                 B.E.
               </span>
             </div>
           </div>
 
           {/* Romantic Tagline */}
-          <div className="mt-8 pt-6 border-t border-[#C49A47]/40">
-            <p className="font-script text-2xl sm:text-4xl text-[#8C5D00] tracking-wide">
+          <div className="mt-3 pt-2.5 border-t border-[#C49A47]/30">
+            <p className="font-script text-base sm:text-xl text-[#8C5D00] tracking-wide">
               "{WEDDING_DATA.couple.tagline}"
             </p>
           </div>
