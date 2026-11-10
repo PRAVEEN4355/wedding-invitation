@@ -10,8 +10,8 @@ export const HaldiExperience: React.FC = () => {
   const calendarUrl = createGoogleCalendarUrl(haldiEvent);
 
   return (
-    <section 
-      id="haldi-section" 
+    <section
+      id="haldi-section"
       className="relative min-h-screen py-24 px-4 sm:px-6 bg-gradient-to-b from-[#FFFDF7] via-[#FFF9EC] to-[#FAF2DA] text-[#3D2106] overflow-hidden flex flex-col justify-center border-y-2 border-[#E8C86A]/40"
     >
       {/* Warm Golden Sunlight Glow */}
@@ -116,7 +116,7 @@ export const HaldiExperience: React.FC = () => {
 
             <div className="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-full bg-[#FFF4C2] border border-[#F5CE36] text-[#7A4B00] text-xs font-serif font-bold uppercase tracking-wider mb-3">
               <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>Groom Celebration</span>
+              <span>Groom Celebration - Haldi</span>
             </div>
 
             <h3 className="font-rozha text-2xl sm:text-3xl text-[#5C3600] mb-3 leading-snug">
