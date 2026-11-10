@@ -21,7 +21,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenSha
 
   const navLinks = [
     { name: 'Countdown', href: '#countdown-section', icon: <Calendar className="w-4 h-4 text-[#C49A47]" /> },
-    { name: 'Haldi', href: '#haldi-section', icon: <Sparkles className="w-4 h-4 text-amber-500" /> },
     { name: 'Families', href: '#family-section', icon: <Users className="w-4 h-4 text-[#C49A47]" /> },
     { name: 'Timeline', href: '#events-section', icon: <Calendar className="w-4 h-4 text-[#C49A47]" /> },
     { name: 'Venue & QR', href: '#venue-section', icon: <MapPin className="w-4 h-4 text-[#C49A47]" /> },

@@ -4,7 +4,6 @@ import { Navbar } from './components/Navbar';
 import { ScrollProgress } from './components/ScrollProgress';
 import { HeroSection } from './components/HeroSection';
 import { LiveCountdown } from './components/LiveCountdown';
-import { HaldiExperience } from './components/HaldiExperience';
 import { FamilyIntroduction } from './components/FamilyIntroduction';
 import { WeddingTimeline } from './components/WeddingTimeline';
 import { VenueAndQRSection } from './components/VenueAndQRSection';
@@ -66,15 +65,12 @@ export const App: React.FC = () => {
           onOpenInvitationModal={() => setIsLightboxOpen(true)}
         />
 
-        {/* Section 2: Live Wedding Countdown (Haldi & Wedding) */}
+        {/* Section 2: Live Wedding Countdown */}
         <div id="countdown-section">
           <LiveCountdown />
         </div>
 
-        {/* Section 3: Special Realistic Haldi Experience with Photorealistic Brass Urli */}
-        <HaldiExperience />
-
-        {/* Section 4: Groom and Bride Family Introduction */}
+        {/* Section 3: Groom and Bride Family Introduction */}
         <FamilyIntroduction />
 
         {/* Section 5: Wedding Celebration Timeline */}
