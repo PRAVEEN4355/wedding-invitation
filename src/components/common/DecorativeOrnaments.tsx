@@ -64,7 +64,7 @@ export const MangoLeafToran: React.FC<{ className?: string }> = ({ className = '
 // Jasmine & Marigold Garland Border
 export const FlowerGarland: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <div className={`flex items-center justify-center space-x-1 py-2 overflow-hidden pointer-events-none select-none ${className}`}>
+    <div className={`w-full max-w-full flex items-center justify-center space-x-1 py-2 overflow-hidden pointer-events-none select-none ${className}`}>
       {[...Array(24)].map((_, i) => (
         <div key={i} className="flex items-center space-x-0.5">
           <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white border border-amber-200/60 shadow-xs transform rotate-45" />

@@ -35,7 +35,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#FFFDF7] text-[#3D141F] font-sans selection:bg-[#C49A47] selection:text-white">
+    <div className="relative min-h-screen w-full bg-[#FFFDF7] text-[#3D141F] font-sans selection:bg-[#C49A47] selection:text-white overflow-x-hidden">
       {/* 1. Opening Fullscreen Golden Temple Door Experience */}
       {!invitationOpened && (
         <OpeningTempleDoor onOpen={handleDoorOpen} />
@@ -57,7 +57,7 @@ export const App: React.FC = () => {
       />
 
       {/* Main Content Sections */}
-      <main className="relative z-10">
+      <main className="relative z-10 w-full overflow-x-hidden">
         {/* Section 1: Hero Couple Introduction */}
         <HeroSection
           onScrollToEvents={() => scrollToSection('events-section')}

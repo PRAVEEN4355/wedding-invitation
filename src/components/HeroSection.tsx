@@ -30,21 +30,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="my-1.5 px-5 py-2 sm:px-7 sm:py-2.5 rounded-full bg-gradient-to-r from-[#FFF5DA] via-[#FFE8B3] to-[#FFF5DA] border-2 border-[#C49A47] text-[#681C32] shadow-md inline-flex items-center space-x-2"
+          className="my-1.5 px-4 py-1.5 sm:px-7 sm:py-2.5 rounded-full bg-gradient-to-r from-[#FFF5DA] via-[#FFE8B3] to-[#FFF5DA] border-2 border-[#C49A47] text-[#681C32] shadow-md inline-flex items-center space-x-1.5 sm:space-x-2 max-w-[95vw]"
         >
-          <span className="text-base sm:text-lg">🌸</span>
-          <span className="font-serif text-xs sm:text-sm tracking-wider uppercase font-bold text-[#8C6721]">
+          <span className="text-sm sm:text-lg">🌸</span>
+          <span className="font-serif text-[11px] sm:text-sm tracking-wider uppercase font-bold text-[#8C6721] truncate">
             {guestName ? (
               <>
-                Special Invitation For: <span className="font-rozha text-[#681C32] font-black text-sm sm:text-base capitalize ml-1">{guestName}</span>
+                Special Invitation For: <span className="font-rozha text-[#681C32] font-black text-xs sm:text-base capitalize ml-1">{guestName}</span>
               </>
             ) : (
               <>
-                Warmly Welcoming <span className="font-rozha text-[#681C32] font-black text-sm sm:text-base ml-1">You & Your Family</span>
+                Warmly Welcoming <span className="font-rozha text-[#681C32] font-black text-xs sm:text-base ml-1">You & Your Family</span>
               </>
             )}
           </span>
-          <span className="text-base sm:text-lg">🌸</span>
+          <span className="text-sm sm:text-lg">🌸</span>
         </motion.div>
 
         <FlowerGarland className="opacity-95 -mt-0.5" />
@@ -106,13 +106,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="relative w-full max-w-lg sm:max-w-xl md:max-w-2xl p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_12px_35px_rgba(104,28,50,0.1)] backdrop-blur-md"
+          className="relative w-full max-w-[92vw] sm:max-w-xl md:max-w-2xl p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_12px_35px_rgba(104,28,50,0.1)] backdrop-blur-md"
         >
           <GoldCornerAccents />
 
           {/* Groom Name */}
           <div className="flex flex-col items-center">
-            <span className="font-script text-lg sm:text-2xl text-[#9A6F25] tracking-wide">
+            <span className="font-script text-base sm:text-2xl text-[#9A6F25] tracking-wide">
               Chi.
             </span>
             <h1 className="font-rozha text-2xl sm:text-4xl md:text-5xl font-black tracking-wider text-[#681C32] drop-shadow-xs">
@@ -124,21 +124,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Connecting Sacred Mangalyam Knot & Heart */}
-          <div className="flex items-center justify-center my-2 sm:my-2.5">
-            <div className="h-px w-10 sm:w-16 bg-[#C49A47]" />
+          <div className="flex items-center justify-center my-1.5 sm:my-2.5">
+            <div className="h-px w-8 sm:w-16 bg-[#C49A47]" />
             <motion.div
               animate={{ scale: [1, 1.15, 1] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              className="mx-3 p-1.5 rounded-full bg-[#FFF5DA] border border-[#C49A47] shadow-xs flex items-center justify-center"
+              className="mx-2.5 sm:mx-3 p-1 sm:p-1.5 rounded-full bg-[#FFF5DA] border border-[#C49A47] shadow-xs flex items-center justify-center"
             >
-              <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-rose-600 fill-rose-600" />
+              <Heart className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-rose-600 fill-rose-600" />
             </motion.div>
-            <div className="h-px w-10 sm:w-16 bg-[#C49A47]" />
+            <div className="h-px w-8 sm:w-16 bg-[#C49A47]" />
           </div>
 
           {/* Bride Name */}
           <div className="flex flex-col items-center">
-            <span className="font-script text-lg sm:text-2xl text-[#9A6F25] tracking-wide">
+            <span className="font-script text-base sm:text-2xl text-[#9A6F25] tracking-wide">
               Chi. Sou.
             </span>
             <h2 className="font-rozha text-xl sm:text-3xl md:text-4xl font-black tracking-wider text-[#681C32] drop-shadow-xs">
@@ -156,8 +156,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Romantic Tagline */}
-          <div className="mt-3 pt-2.5 border-t border-[#C49A47]/30">
-            <p className="font-script text-base sm:text-xl text-[#8C5D00] tracking-wide">
+          <div className="mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-[#C49A47]/30">
+            <p className="font-script text-sm sm:text-xl text-[#8C5D00] tracking-wide">
               "{WEDDING_DATA.couple.tagline}"
             </p>
           </div>
@@ -168,15 +168,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm"
+          className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full sm:w-auto text-xs sm:text-sm"
         >
-          <div className="flex items-center space-x-2 px-5 py-2.5 rounded-full bg-white/90 border border-[#C49A47] text-[#4A1224] shadow-sm font-serif font-bold">
-            <Calendar className="w-4 h-4 text-[#C49A47]" />
+          <div className="flex items-center justify-center space-x-2 w-full sm:w-auto px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/90 border border-[#C49A47] text-[#4A1224] shadow-sm font-serif font-bold text-center">
+            <Calendar className="w-4 h-4 text-[#C49A47] flex-shrink-0" />
             <span>19 & 20 November 2026</span>
           </div>
 
-          <div className="flex items-center space-x-2 px-5 py-2.5 rounded-full bg-white/90 border border-[#C49A47] text-[#4A1224] shadow-sm font-serif font-bold">
-            <MapPin className="w-4 h-4 text-[#C49A47]" />
+          <div className="flex items-center justify-center space-x-2 w-full sm:w-auto px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/90 border border-[#C49A47] text-[#4A1224] shadow-sm font-serif font-bold text-center">
+            <MapPin className="w-4 h-4 text-[#C49A47] flex-shrink-0" />
             <span>SRL Kalyana Mandapam, Venkatagiri</span>
           </div>
         </motion.div>
@@ -186,25 +186,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto max-w-xs sm:max-w-none"
         >
           <button
             onClick={onScrollToEvents}
-            className="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#681C32] to-[#8C2242] text-white font-serif font-bold text-xs sm:text-sm tracking-wider uppercase shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer border border-[#C49A47]"
+            className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-[#681C32] to-[#8C2242] text-white font-serif font-bold text-xs sm:text-sm tracking-wider uppercase shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer border border-[#C49A47] text-center"
           >
             Celebration Events
           </button>
 
           <button
             onClick={onScrollToVenue}
-            className="px-7 py-3.5 rounded-full bg-[#FFF5DA] border-2 border-[#C49A47] text-[#681C32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:bg-[#FFEEC2] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#FFF5DA] border-2 border-[#C49A47] text-[#681C32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:bg-[#FFEEC2] hover:scale-105 active:scale-95 transition-all cursor-pointer text-center"
           >
             Venue & Map QR
           </button>
 
           <button
             onClick={onOpenInvitationModal}
-            className="px-7 py-3.5 rounded-full bg-white border border-[#C49A47] text-[#4A1224] font-serif font-semibold text-xs sm:text-sm tracking-wider hover:border-[#681C32] hover:text-[#681C32] transition-all flex items-center space-x-2 cursor-pointer shadow-sm"
+            className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white border border-[#C49A47] text-[#4A1224] font-serif font-semibold text-xs sm:text-sm tracking-wider hover:border-[#681C32] hover:text-[#681C32] transition-all flex items-center justify-center space-x-2 cursor-pointer shadow-sm text-center"
           >
             <span>📜</span>
             <span>View Original Invitation</span>

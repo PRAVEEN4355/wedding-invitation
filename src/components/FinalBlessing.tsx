@@ -55,44 +55,44 @@ export const FinalBlessing: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
-          className="relative p-6 sm:p-12 rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_50px_rgba(104,28,50,0.12)] backdrop-blur-md w-full"
+          className="relative p-4 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_50px_rgba(104,28,50,0.12)] backdrop-blur-md w-full"
         >
           <GoldCornerAccents />
 
-          <p className="font-serif italic text-base sm:text-xl text-[#4A1224] leading-relaxed mb-6 max-w-2xl mx-auto font-medium">
+          <p className="font-serif italic text-sm sm:text-xl text-[#4A1224] leading-relaxed mb-4 sm:mb-6 max-w-2xl mx-auto font-medium">
             "With the blessings of our elders and the love of our family and friends, we invite you to be part of our special day."
           </p>
 
-          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#C49A47] to-transparent mx-auto mb-6" />
+          <div className="w-20 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-[#C49A47] to-transparent mx-auto mb-4 sm:mb-6" />
 
           {/* Couple Names */}
-          <div className="my-6">
-            <h3 className="font-rozha text-3xl sm:text-5xl md:text-6xl font-black text-[#681C32] tracking-wider drop-shadow-sm">
+          <div className="my-4 sm:my-6">
+            <h3 className="font-rozha text-2xl sm:text-4xl md:text-5xl font-black text-[#681C32] tracking-wider drop-shadow-sm">
               PRAVEEN
             </h3>
-            <div className="flex items-center justify-center my-2 text-rose-600">
-              <span className="h-px w-10 bg-[#C49A47]" />
-              <Heart className="w-5 h-5 mx-3 fill-current text-rose-600 animate-pulse" />
-              <span className="h-px w-10 bg-[#C49A47]" />
+            <div className="flex items-center justify-center my-1.5 sm:my-2 text-rose-600">
+              <span className="h-px w-8 sm:w-10 bg-[#C49A47]" />
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 mx-2.5 sm:mx-3 fill-current text-rose-600 animate-pulse" />
+              <span className="h-px w-8 sm:w-10 bg-[#C49A47]" />
             </div>
-            <h4 className="font-rozha text-2xl sm:text-4xl md:text-5xl font-black text-[#681C32] tracking-wider drop-shadow-sm">
+            <h4 className="font-rozha text-xl sm:text-3xl md:text-4xl font-black text-[#681C32] tracking-wider drop-shadow-sm">
               LAKSHMI PRASANNA
             </h4>
           </div>
 
-          <p className="font-script text-2xl sm:text-3xl text-[#8C5D00] font-bold tracking-wide mt-6">
+          <p className="font-script text-xl sm:text-3xl text-[#8C5D00] font-bold tracking-wide mt-4 sm:mt-6">
             "Your presence is our greatest blessing."
           </p>
 
-          <p className="text-xs sm:text-sm font-sans text-[#8C6721] tracking-widest uppercase mt-4 font-bold">
+          <p className="text-xs sm:text-sm font-sans text-[#8C6721] tracking-widest uppercase mt-3 sm:mt-4 font-bold">
             {WEDDING_DATA.familyMembers.compliments}
           </p>
 
           {/* Share & Invite Buttons */}
-          <div className="mt-8 pt-6 border-t border-[#C49A47]/30 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-[#C49A47]/30 flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
             <button
               onClick={handleShareWhatsApp}
-              className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-serif font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3 sm:py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-serif font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer text-center"
             >
               <Share2 className="w-4 h-4" />
               <span>Share on WhatsApp</span>
@@ -100,7 +100,7 @@ export const FinalBlessing: React.FC = () => {
 
             <button
               onClick={handleCopyLink}
-              className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-full bg-[#FFF5DA] hover:bg-[#FFEEC2] border border-[#C49A47] text-[#681C32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3 sm:py-3.5 rounded-full bg-[#FFF5DA] hover:bg-[#FFEEC2] border border-[#C49A47] text-[#681C32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs text-center"
             >
               {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#C49A47]" />}
               <span>{copied ? 'Link Copied!' : 'Copy Invitation Link'}</span>

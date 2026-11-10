@@ -42,28 +42,28 @@ const CountdownCard: React.FC<{ value: number; label: string; isSeconds?: boolea
         initial={isSeconds ? { scale: 0.94, opacity: 0.85 } : undefined}
         animate={isSeconds ? { scale: 1, opacity: 1 } : undefined}
         transition={{ duration: 0.25, ease: 'easeOut' }}
-        className={`relative w-18 sm:w-28 md:w-34 h-24 sm:h-34 md:h-40 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-white via-[#FFFDF7] to-[#FAF1DD] border-2 sm:border-[2.5px] ${
+        className={`relative w-14 sm:w-24 md:w-34 h-20 sm:h-32 md:h-40 rounded-xl sm:rounded-3xl bg-gradient-to-b from-white via-[#FFFDF7] to-[#FAF1DD] border-2 sm:border-[2.5px] ${
           isSeconds 
-            ? 'border-[#C49A47] shadow-[0_12px_28px_rgba(245,206,54,0.35)] ring-2 ring-[#F5CE36]/30' 
-            : 'border-[#C49A47] shadow-[0_10px_25px_rgba(104,28,50,0.1)]'
+            ? 'border-[#C49A47] shadow-[0_8px_24px_rgba(245,206,54,0.35)] ring-1.5 sm:ring-2 ring-[#F5CE36]/30' 
+            : 'border-[#C49A47] shadow-[0_8px_20px_rgba(104,28,50,0.1)]'
         } flex flex-col items-center justify-center overflow-hidden group hover:scale-105 hover:border-[#8C6721] transition-all duration-300`}
       >
         {/* Top Glass Reflection Layer */}
         <div className="absolute top-0 inset-x-0 h-1/2 bg-white/70 border-b border-[#C49A47]/20 pointer-events-none" />
 
         {/* Large Royal Digit Value */}
-        <span className="font-rozha text-3xl sm:text-6xl md:text-7xl font-black text-[#681C32] tracking-tight drop-shadow-sm z-10">
+        <span className="font-rozha text-2xl sm:text-5xl md:text-7xl font-black text-[#681C32] tracking-tight drop-shadow-sm z-10">
           {formatted}
         </span>
 
         {/* Riveted Brass Corner Screws */}
-        <span className="absolute top-2 left-2 w-1.5 h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
-        <span className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
-        <span className="absolute bottom-2 left-2 w-1.5 h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
-        <span className="absolute bottom-2 right-2 w-1.5 h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
+        <span className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
+        <span className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
+        <span className="absolute bottom-1.5 left-1.5 sm:bottom-2 sm:left-2 w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
+        <span className="absolute bottom-1.5 right-1.5 sm:bottom-2 sm:right-2 w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#C49A47]/70 shadow-2xs" />
       </motion.div>
 
-      <span className="mt-2.5 text-[11px] sm:text-xs md:text-sm font-sans font-bold uppercase tracking-[0.2em] text-[#8C6721]">
+      <span className="mt-2 text-[10px] sm:text-xs md:text-sm font-sans font-bold uppercase tracking-wider sm:tracking-[0.2em] text-[#8C6721]">
         {label}
       </span>
     </div>
@@ -112,31 +112,31 @@ export const LiveCountdown: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative rounded-3xl p-6 sm:p-10 md:p-12 bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_50px_rgba(104,28,50,0.14)] backdrop-blur-md overflow-hidden"
+          className="relative rounded-2xl sm:rounded-3xl p-4 sm:p-10 md:p-12 bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_50px_rgba(104,28,50,0.14)] backdrop-blur-md overflow-hidden"
         >
           <GoldCornerAccents />
 
           {/* Top Traditional Auspicious Diyas & Event Header */}
-          <div className="flex flex-col sm:flex-row items-center justify-between pb-5 border-b border-[#C49A47]/30 mb-8 gap-4 text-center sm:text-left">
-            <div className="flex items-center space-x-3.5">
-              <AuspiciousDiya className="scale-110" />
+          <div className="flex flex-col sm:flex-row items-center justify-between pb-4 sm:pb-5 border-b border-[#C49A47]/30 mb-6 sm:mb-8 gap-3 sm:gap-4 text-center sm:text-left">
+            <div className="flex items-center space-x-3">
+              <AuspiciousDiya className="scale-100 sm:scale-110 flex-shrink-0" />
               <div>
-                <span className="text-xs uppercase tracking-widest font-sans font-bold text-[#681C32] flex items-center justify-center sm:justify-start gap-1.5">
+                <span className="text-[11px] sm:text-xs uppercase tracking-widest font-sans font-bold text-[#681C32] flex items-center justify-center sm:justify-start gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-[#C49A47]" /> Sacred Kalyana Muhurtham
                 </span>
-                <h3 className="font-rozha text-2xl sm:text-3xl text-[#681C32] mt-0.5 font-bold">
+                <h3 className="font-rozha text-xl sm:text-3xl text-[#681C32] mt-0.5 font-bold">
                   Wedding Countdown
                 </h3>
               </div>
             </div>
 
             <div className="flex flex-col items-center sm:items-end">
-              <div className="flex items-center space-x-1.5 mb-1 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-bold uppercase tracking-wider shadow-2xs">
+              <div className="flex items-center space-x-1.5 mb-1 px-3 py-0.5 sm:py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-bold uppercase tracking-wider shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 <span>Live Ticking</span>
               </div>
-              <span className="text-sm font-serif text-[#380E1B] font-bold">Friday, 20 November 2026</span>
-              <span className="text-xs font-sans text-[#8C6721] font-semibold">4:30 AM – 6:00 AM (Mesham Lagnam)</span>
+              <span className="text-xs sm:text-sm font-serif text-[#380E1B] font-bold">Friday, 20 November 2026</span>
+              <span className="text-[11px] sm:text-xs font-sans text-[#8C6721] font-semibold">4:30 AM – 6:00 AM (Mesham Lagnam)</span>
             </div>
           </div>
 
@@ -155,25 +155,25 @@ export const LiveCountdown: React.FC = () => {
             </div>
           ) : (
             /* Live 4-Unit Animated Digit Display */
-            <div className="flex justify-around items-center py-4 sm:py-6 px-2">
+            <div className="flex justify-center items-center py-3 sm:py-6 px-1 sm:px-2 gap-1.5 sm:gap-4 md:gap-6 w-full">
               <CountdownCard value={weddingCountdown.days} label="Days" />
-              <span className="font-serif text-2xl sm:text-4xl text-[#C49A47] -mt-6 font-bold animate-pulse">:</span>
+              <span className="font-serif text-xl sm:text-4xl text-[#C49A47] -mt-4 sm:-mt-6 font-bold animate-pulse px-0.5 sm:px-1">:</span>
               <CountdownCard value={weddingCountdown.hours} label="Hours" />
-              <span className="font-serif text-2xl sm:text-4xl text-[#C49A47] -mt-6 font-bold animate-pulse">:</span>
+              <span className="font-serif text-xl sm:text-4xl text-[#C49A47] -mt-4 sm:-mt-6 font-bold animate-pulse px-0.5 sm:px-1">:</span>
               <CountdownCard value={weddingCountdown.minutes} label="Minutes" />
-              <span className="font-serif text-2xl sm:text-4xl text-[#C49A47] -mt-6 font-bold animate-pulse">:</span>
+              <span className="font-serif text-xl sm:text-4xl text-[#C49A47] -mt-4 sm:-mt-6 font-bold animate-pulse px-0.5 sm:px-1">:</span>
               <CountdownCard value={weddingCountdown.seconds} label="Seconds" isSeconds={true} />
             </div>
           )}
 
           {/* Bottom Auspicious Venue & Ritual Blessing Banner */}
-          <div className="mt-8 pt-5 border-t border-[#C49A47]/30 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-2">
-            <span className="text-xs text-[#6B3A48] font-sans tracking-wide font-medium flex items-center justify-center sm:justify-start gap-1.5">
-              <Heart className="w-3.5 h-3.5 text-rose-600 fill-rose-600 animate-pulse" />
+          <div className="mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-[#C49A47]/30 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-2">
+            <span className="text-[11px] sm:text-xs text-[#6B3A48] font-sans tracking-wide font-medium flex items-center justify-center sm:justify-start gap-1.5">
+              <Heart className="w-3.5 h-3.5 text-rose-600 fill-rose-600 animate-pulse flex-shrink-0" />
               Auspicious Subha Lagnam • Mangalyadharanam between 4:30 AM – 6:00 AM
             </span>
 
-            <span className="text-xs font-serif font-bold text-[#681C32] bg-[#FAF4EA] px-3.5 py-1.5 rounded-full border border-[#C49A47]/40 shadow-2xs">
+            <span className="text-[11px] sm:text-xs font-serif font-bold text-[#681C32] bg-[#FAF4EA] px-3.5 py-1.5 rounded-full border border-[#C49A47]/40 shadow-2xs">
               📍 SRL Kalyana Mandapam, Venkatagiri
             </span>
           </div>

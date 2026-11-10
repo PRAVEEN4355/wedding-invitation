@@ -29,14 +29,14 @@ export const FamilyIntroduction: React.FC = () => {
         </div>
 
         {/* Groom & Bride Two Cards Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-stretch">
           {/* 1. GROOM CARD */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative p-6 sm:p-10 rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_15px_40px_rgba(104,28,50,0.1)] backdrop-blur-md flex flex-col justify-between"
+            className="relative p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_15px_40px_rgba(104,28,50,0.1)] backdrop-blur-md flex flex-col justify-between"
           >
             <GoldCornerAccents />
 
@@ -49,22 +49,22 @@ export const FamilyIntroduction: React.FC = () => {
               </div>
 
               <div className="text-center my-4">
-                <span className="font-script text-2xl text-[#9A6F25]">
+                <span className="font-script text-xl sm:text-2xl text-[#9A6F25]">
                   {groom.title}
                 </span>
-                <h3 className="font-rozha text-3xl sm:text-4xl lg:text-5xl font-black text-[#681C32] my-1 drop-shadow-sm">
+                <h3 className="font-rozha text-2xl sm:text-4xl lg:text-5xl font-black text-[#681C32] my-1 drop-shadow-sm">
                   {groom.name}
                 </h3>
-                <span className="inline-block px-3.5 py-1 rounded-full bg-[#FFF5DA] text-[#681C32] font-serif text-xs font-bold tracking-wider border border-[#C49A47]">
+                <span className="inline-block px-3 sm:px-3.5 py-0.5 sm:py-1 rounded-full bg-[#FFF5DA] text-[#681C32] font-serif text-[11px] sm:text-xs font-bold tracking-wider border border-[#C49A47]">
                   {groom.degree}
                 </span>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#C49A47]/30 text-center space-y-2">
-                <span className="text-xs uppercase tracking-wider text-[#8C6721] font-sans font-bold block">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#C49A47]/30 text-center space-y-1.5 sm:space-y-2">
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider text-[#8C6721] font-sans font-bold block">
                   Beloved Son of
                 </span>
-                <p className="font-serif text-base sm:text-lg text-[#380E1B] font-bold">
+                <p className="font-serif text-sm sm:text-base md:text-lg text-[#380E1B] font-bold">
                   {groom.parents}
                 </p>
                 <p className="font-sans text-xs sm:text-sm text-[#6B3A48] font-medium">
@@ -73,9 +73,9 @@ export const FamilyIntroduction: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-[#C49A47]/20 flex items-center justify-center space-x-1.5">
+            <div className="mt-6 sm:mt-8 pt-4 border-t border-[#C49A47]/20 flex items-center justify-center space-x-1.5">
               {[...Array(7)].map((_, i) => (
-                <span key={i} className="w-2.5 h-2.5 rounded-full bg-amber-100 border border-[#C49A47]/40 shadow-2xs" />
+                <span key={i} className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-amber-100 border border-[#C49A47]/40 shadow-2xs" />
               ))}
             </div>
           </motion.div>
@@ -97,7 +97,7 @@ export const FamilyIntroduction: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative p-6 sm:p-10 rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_15px_40px_rgba(104,28,50,0.1)] backdrop-blur-md flex flex-col justify-between"
+            className="relative p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_15px_40px_rgba(104,28,50,0.1)] backdrop-blur-md flex flex-col justify-between"
           >
             <GoldCornerAccents />
 
@@ -110,28 +110,28 @@ export const FamilyIntroduction: React.FC = () => {
               </div>
 
               <div className="text-center my-4">
-                <span className="font-script text-2xl text-[#9A6F25]">
+                <span className="font-script text-xl sm:text-2xl text-[#9A6F25]">
                   {bride.title}
                 </span>
-                <h3 className="font-rozha text-2xl sm:text-3.5xl lg:text-4xl font-black text-[#681C32] my-1 drop-shadow-sm">
+                <h3 className="font-rozha text-xl sm:text-3xl lg:text-4xl font-black text-[#681C32] my-1 drop-shadow-sm">
                   {bride.name}
                 </h3>
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-[#6B3A48] text-xs font-serif italic">
+                <div className="flex flex-wrap items-center justify-center gap-1.5 sm:space-x-2">
+                  <span className="text-[#6B3A48] text-[11px] sm:text-xs font-serif italic">
                     {bride.alias}
                   </span>
                   <span className="text-[#C49A47]">•</span>
-                  <span className="inline-block px-3.5 py-1 rounded-full bg-[#FFF5DA] text-[#681C32] font-serif text-xs font-bold tracking-wider border border-[#C49A47]">
+                  <span className="inline-block px-3 sm:px-3.5 py-0.5 sm:py-1 rounded-full bg-[#FFF5DA] text-[#681C32] font-serif text-[11px] sm:text-xs font-bold tracking-wider border border-[#C49A47]">
                     {bride.degree}
                   </span>
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#C49A47]/30 text-center space-y-2">
-                <span className="text-xs uppercase tracking-wider text-[#8C6721] font-sans font-bold block">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#C49A47]/30 text-center space-y-1.5 sm:space-y-2">
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider text-[#8C6721] font-sans font-bold block">
                   Beloved Daughter of
                 </span>
-                <p className="font-serif text-base sm:text-lg text-[#380E1B] font-bold">
+                <p className="font-serif text-sm sm:text-base md:text-lg text-[#380E1B] font-bold">
                   {bride.parents}
                 </p>
                 <p className="font-sans text-xs sm:text-sm text-[#6B3A48] font-medium">
@@ -140,9 +140,9 @@ export const FamilyIntroduction: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-[#C49A47]/20 flex items-center justify-center space-x-1.5">
+            <div className="mt-6 sm:mt-8 pt-4 border-t border-[#C49A47]/20 flex items-center justify-center space-x-1.5">
               {[...Array(7)].map((_, i) => (
-                <span key={i} className="w-2.5 h-2.5 rounded-full bg-amber-100 border border-[#C49A47]/40 shadow-2xs" />
+                <span key={i} className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-amber-100 border border-[#C49A47]/40 shadow-2xs" />
               ))}
             </div>
           </motion.div>
@@ -154,7 +154,7 @@ export const FamilyIntroduction: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-14 p-6 sm:p-8 rounded-3xl bg-white/90 border border-[#C49A47]/50 backdrop-blur-sm text-center shadow-md"
+          className="mt-10 sm:mt-14 p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/90 border border-[#C49A47]/50 backdrop-blur-sm text-center shadow-md"
         >
           <h4 className="font-rozha text-lg sm:text-xl text-[#681C32] uppercase tracking-wider mb-4 font-bold">
             Awaiting Your Gracious Presence

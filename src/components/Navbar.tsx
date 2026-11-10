@@ -42,16 +42,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenSha
           : 'bg-[#FFFDF7]/90 backdrop-blur-md border-b border-[#C49A47]/25 shadow-xs py-3'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between">
         {/* Brand Logo */}
         <a
           href="#"
-          className="flex items-center space-x-2 group cursor-pointer"
+          className="flex items-center space-x-1.5 sm:space-x-2 group cursor-pointer min-w-0"
         >
-          <span className="font-rozha text-base sm:text-xl font-bold text-[#681C32] tracking-wider group-hover:text-[#8C2242] transition-colors">
+          <span className="font-rozha text-sm sm:text-base md:text-xl font-bold text-[#681C32] tracking-wider group-hover:text-[#8C2242] transition-colors truncate">
             PRAVEEN & LAKSHMI
           </span>
-          <Heart className="w-3.5 h-3.5 text-rose-600 fill-rose-600 animate-pulse" />
+          <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-rose-600 fill-rose-600 animate-pulse flex-shrink-0" />
           <span className="hidden xl:inline font-serif text-xs text-[#8C6721] tracking-widest uppercase font-semibold">
             19-20 Nov 2026
           </span>
@@ -90,11 +90,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenSha
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-2.5 lg:hidden">
+        <div className="flex items-center space-x-1.5 sm:space-x-2.5 lg:hidden flex-shrink-0">
           {onOpenShareModal && (
             <button
               onClick={onOpenShareModal}
-              className="p-2 rounded-full bg-[#681C32] border border-[#C49A47] text-white text-xs font-serif shadow-xs"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#681C32] border border-[#C49A47] text-white text-xs font-serif shadow-xs flex items-center justify-center cursor-pointer"
               title="Personalize WhatsApp Invite"
             >
               💌
@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenSha
 
           <button
             onClick={onOpenInvitationModal}
-            className="p-2 rounded-full bg-[#FFF5DA] border border-[#C49A47] text-[#681C32] text-xs font-serif"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFF5DA] border border-[#C49A47] text-[#681C32] text-xs font-serif flex items-center justify-center cursor-pointer"
             title="View Invitation Card"
           >
             📜
@@ -111,10 +111,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInvitationModal, onOpenSha
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl bg-white border border-[#C49A47] text-[#681C32] hover:bg-[#FFF5DA]"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white border border-[#C49A47] text-[#681C32] hover:bg-[#FFF5DA] flex items-center justify-center cursor-pointer"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
         </div>
       </div>

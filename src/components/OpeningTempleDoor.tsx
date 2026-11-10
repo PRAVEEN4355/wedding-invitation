@@ -66,7 +66,7 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
           {/* 2. Top Realistic Mango Leaf Toran & Hanging Temple Bells */}
           <div className="absolute top-0 inset-x-0 z-30 flex flex-col items-center">
             {/* Realistic Mango Leaf Garland Image Banner */}
-            <div className="w-full h-12 sm:h-16 overflow-hidden relative shadow-md">
+            <div className="w-full h-10 sm:h-16 overflow-hidden relative shadow-md">
               <img
                 src="/images/realistic_mango_leaf_toran.jpg"
                 alt="Sacred South Indian Fresh Mango Leaf & Marigold Toran"
@@ -92,7 +92,7 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               animate={isOpening ? { rotateY: -105, x: '-25%', opacity: 0.15 } : { rotateY: 0, x: 0 }}
               transition={{ duration: 2.0, ease: [0.65, 0, 0.35, 1] }}
               style={{ transformOrigin: 'left center' }}
-              className="w-1/2 h-full relative overflow-hidden border-r-4 border-[#5E3F10] shadow-[15px_0_40px_rgba(0,0,0,0.8)]"
+              className="w-1/2 h-full relative overflow-hidden border-r-2 sm:border-r-4 border-[#5E3F10] shadow-[15px_0_40px_rgba(0,0,0,0.8)]"
             >
               {/* Photorealistic Door Texture */}
               <img
@@ -102,8 +102,8 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               />
               <div className="absolute inset-0 bg-gradient-to-r from-amber-950/40 via-amber-900/20 to-black/50" />
 
-              {/* Ornate Inset Panel: Lord Ganesha Blessing */}
-              <div className="absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
+              {/* Ornate Inset Panel: Lord Ganesha Blessing (Visible on Tablets & Desktops) */}
+              <div className="hidden sm:flex absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
                 <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md -translate-x-3 sm:-translate-x-8 lg:-translate-x-14">
                   卐 Sri Maha Ganapathi 卐
                 </div>
@@ -133,7 +133,7 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               animate={isOpening ? { rotateY: 105, x: '25%', opacity: 0.15 } : { rotateY: 0, x: 0 }}
               transition={{ duration: 2.0, ease: [0.65, 0, 0.35, 1] }}
               style={{ transformOrigin: 'right center' }}
-              className="w-1/2 h-full relative overflow-hidden border-l-4 border-[#5E3F10] shadow-[-15px_0_40px_rgba(0,0,0,0.8)]"
+              className="w-1/2 h-full relative overflow-hidden border-l-2 sm:border-l-4 border-[#5E3F10] shadow-[-15px_0_40px_rgba(0,0,0,0.8)]"
             >
               {/* Photorealistic Door Texture */}
               <img
@@ -143,8 +143,8 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               />
               <div className="absolute inset-0 bg-gradient-to-l from-amber-950/40 via-amber-900/20 to-black/50" />
 
-              {/* Ornate Inset Panel: Lord Murugan Blessing */}
-              <div className="absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
+              {/* Ornate Inset Panel: Lord Murugan Blessing (Visible on Tablets & Desktops) */}
+              <div className="hidden sm:flex absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
                 <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md translate-x-3 sm:translate-x-8 lg:translate-x-14">
                   ✨ Sri Subramanya Swamy ✨
                 </div>
@@ -175,68 +175,68 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className={`absolute z-40 max-w-[90vw] sm:max-w-md md:max-w-[460px] mx-auto p-5 sm:p-8 rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-md text-center transition-all ${
+            className={`absolute z-40 max-w-[92vw] sm:max-w-md md:max-w-[460px] mx-auto p-4 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-md text-center transition-all ${
               isOpening ? 'scale-110 opacity-0 transition-all duration-1000' : ''
             }`}
           >
             {/* Personalized Guest Badge */}
             {guestName ? (
-              <div className="mb-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#FFF5DA] via-[#FFE8B3] to-[#FFF5DA] border border-[#C49A47] text-[#681C32] inline-flex items-center space-x-1.5 shadow-xs">
+              <div className="mb-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-gradient-to-r from-[#FFF5DA] via-[#FFE8B3] to-[#FFF5DA] border border-[#C49A47] text-[#681C32] inline-flex items-center space-x-1.5 shadow-xs max-w-full">
                 <span>🌸</span>
-                <span className="font-serif text-xs font-bold uppercase tracking-wider text-[#8C6721]">
+                <span className="font-serif text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#8C6721] truncate">
                   Special Invitation for: <span className="text-[#681C32] font-rozha text-xs sm:text-sm font-black capitalize ml-1">{guestName}</span>
                 </span>
                 <span>🌸</span>
               </div>
             ) : (
               <div className="mb-2 px-3 py-1 rounded-full bg-[#FFF5DA] border border-[#C49A47]/60 text-[#681C32] inline-flex items-center space-x-1 shadow-2xs">
-                <span className="font-serif text-[11px] font-bold uppercase tracking-wider text-[#8C6721]">
+                <span className="font-serif text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#8C6721]">
                   Warmly Welcoming You & Your Family
                 </span>
               </div>
             )}
 
             {/* Top Invocation from Official Card */}
-            <p className="font-rozha text-[#681C32] tracking-widest text-sm sm:text-lg mb-1 font-bold drop-shadow-sm">
+            <p className="font-rozha text-[#681C32] tracking-widest text-xs sm:text-base md:text-lg mb-0.5 sm:mb-1 font-bold drop-shadow-sm">
               || Sri Veeragaran Angalamman Thunai ||
             </p>
 
-            <p className="text-[#5A2C18] text-xs sm:text-sm font-sans mb-3 tracking-wider font-semibold">
+            <p className="text-[#5A2C18] text-[11px] sm:text-xs md:text-sm font-sans mb-2 tracking-wider font-semibold">
               With the blessings of our families
             </p>
 
-            <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#C49A47] to-transparent mx-auto mb-3" />
+            <div className="w-20 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-[#C49A47] to-transparent mx-auto mb-2 sm:mb-3" />
 
-            <p className="text-[#380E1B] text-[11px] sm:text-xs tracking-wider uppercase font-sans mb-3 font-semibold">
+            <p className="text-[#380E1B] text-[10px] sm:text-xs tracking-wider uppercase font-sans mb-2 sm:mb-3 font-semibold">
               Together with our families, we invite you to celebrate
             </p>
 
             {/* Couple Names */}
-            <div className="my-4">
-              <span className="font-script text-2xl text-[#9A6F25]">Chi.</span>
-              <h1 className="font-rozha text-3xl sm:text-5xl text-[#681C32] tracking-wider drop-shadow-sm">
+            <div className="my-2 sm:my-3">
+              <span className="font-script text-xl sm:text-2xl text-[#9A6F25]">Chi.</span>
+              <h1 className="font-rozha text-2xl sm:text-4xl md:text-5xl text-[#681C32] tracking-wider drop-shadow-sm font-black">
                 P. PRAVEEN
               </h1>
-              <span className="text-[#8C6721] text-xs font-serif tracking-widest font-semibold block -mt-1 mb-1">
+              <span className="text-[#8C6721] text-[10px] sm:text-xs font-serif tracking-widest font-semibold block -mt-0.5 mb-1">
                 B.Tech.
               </span>
 
               <div className="flex items-center justify-center my-1 text-rose-600">
-                <span className="h-px w-12 bg-[#C49A47]" />
-                <span className="mx-3 text-xl sm:text-2xl animate-pulse">❤️</span>
-                <span className="h-px w-12 bg-[#C49A47]" />
+                <span className="h-px w-10 sm:w-12 bg-[#C49A47]" />
+                <span className="mx-2 sm:mx-3 text-lg sm:text-2xl animate-pulse">❤️</span>
+                <span className="h-px w-10 sm:w-12 bg-[#C49A47]" />
               </div>
 
-              <span className="font-script text-2xl text-[#9A6F25]">Chi. Sou.</span>
-              <h2 className="font-rozha text-2xl sm:text-4xl text-[#681C32] tracking-wider drop-shadow-sm">
+              <span className="font-script text-xl sm:text-2xl text-[#9A6F25]">Chi. Sou.</span>
+              <h2 className="font-rozha text-xl sm:text-3xl md:text-4xl text-[#681C32] tracking-wider drop-shadow-sm font-black">
                 A. LAKSHMI PRASANNA
               </h2>
-              <span className="text-[#8C6721] text-xs font-serif tracking-widest font-semibold block -mt-1">
+              <span className="text-[#8C6721] text-[10px] sm:text-xs font-serif tracking-widest font-semibold block -mt-0.5">
                 B.E. <span className="font-serif italic text-[#6B3A48]">(Prasanna Lakshmi)</span>
               </span>
             </div>
 
-            <p className="text-[#7A4D00] text-base sm:text-xl font-script mb-5">
+            <p className="text-[#7A4D00] text-sm sm:text-lg font-script mb-3 sm:mb-5">
               "Two Hearts, One Beautiful Journey"
             </p>
 
@@ -244,10 +244,10 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
             <button
               onClick={handleOpenInvitation}
               disabled={isOpening}
-              className="relative inline-flex items-center justify-center px-8 py-3.5 text-sm sm:text-base font-serif font-bold text-white bg-gradient-to-r from-[#681C32] via-[#85233F] to-[#681C32] border border-[#E5C058] rounded-full shadow-[0_0_25px_rgba(104,28,50,0.4)] hover:shadow-[0_0_35px_rgba(104,28,50,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 group overflow-hidden cursor-pointer"
+              className="relative w-full sm:w-auto inline-flex items-center justify-center px-5 sm:px-8 py-3 sm:py-3.5 text-xs sm:text-base font-serif font-bold text-white bg-gradient-to-r from-[#681C32] via-[#85233F] to-[#681C32] border border-[#E5C058] rounded-full shadow-[0_0_25px_rgba(104,28,50,0.4)] hover:shadow-[0_0_35px_rgba(104,28,50,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 group overflow-hidden cursor-pointer"
             >
               <span className="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              <span className="mr-2 text-xl">🪔</span>
+              <span className="mr-1.5 sm:mr-2 text-lg sm:text-xl">🪔</span>
               <span className="tracking-widest uppercase font-serif font-black">
                 {isOpening ? "Entering Mandapam..." : "OPEN WEDDING INVITATION"}
               </span>
