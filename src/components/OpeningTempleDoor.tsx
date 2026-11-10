@@ -93,14 +93,14 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               <div className="absolute inset-0 bg-gradient-to-r from-amber-950/40 via-amber-900/20 to-black/50" />
 
               {/* Ornate Inset Panel: Lord Ganesha Blessing */}
-              <div className="absolute inset-4 sm:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex flex-col justify-between items-center p-4 bg-black/35 backdrop-blur-[1px] shadow-2xl">
-                <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md">
+              <div className="absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
+                <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md -translate-x-3 sm:-translate-x-8 lg:-translate-x-14">
                   卐 Sri Maha Ganapathi 卐
                 </div>
 
-                {/* 3D Golden Ganesha 3D Logo */}
-                <div className="relative my-auto flex flex-col items-center">
-                  <div className="w-28 h-28 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
+                {/* 3D Golden Ganesha 3D Logo (Shifted to Left for Center Card Clearance) */}
+                <div className="relative my-auto flex flex-col items-center -translate-x-4 sm:-translate-x-10 md:-translate-x-14 lg:-translate-x-20 transition-transform">
+                  <div className="w-26 h-26 sm:w-38 sm:h-38 md:w-44 md:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
                     <img
                       src="/images/divine_ganesha_relief.jpg"
                       alt="Lord Ganesha 3D"
@@ -112,7 +112,7 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
                   </span>
                 </div>
 
-                <div className="text-[11px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center">
+                <div className="text-[11px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center -translate-x-3 sm:-translate-x-8 lg:-translate-x-14">
                   Auspicious Beginnings
                 </div>
               </div>
@@ -134,14 +134,14 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               <div className="absolute inset-0 bg-gradient-to-l from-amber-950/40 via-amber-900/20 to-black/50" />
 
               {/* Ornate Inset Panel: Lord Murugan Blessing */}
-              <div className="absolute inset-4 sm:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex flex-col justify-between items-center p-4 bg-black/35 backdrop-blur-[1px] shadow-2xl">
-                <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md">
+              <div className="absolute inset-4 sm:inset-8 lg:inset-10 border-2 border-[#E5C058]/80 rounded-lg flex flex-col justify-between items-center p-3 sm:p-5 bg-black/35 backdrop-blur-[1px] shadow-2xl">
+                <div className="px-4 py-1.5 rounded-full bg-[#3D141F]/80 border border-[#C49A47] text-[#F5CE36] text-xs sm:text-sm font-serif tracking-widest uppercase font-bold shadow-md translate-x-3 sm:translate-x-8 lg:translate-x-14">
                   ✨ Sri Subramanya Swamy ✨
                 </div>
 
-                {/* 3D Golden Murugan 3D Logo */}
-                <div className="relative my-auto flex flex-col items-center">
-                  <div className="w-28 h-28 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
+                {/* 3D Golden Murugan 3D Logo (Shifted to Right for Center Card Clearance) */}
+                <div className="relative my-auto flex flex-col items-center translate-x-4 sm:translate-x-10 md:translate-x-14 lg:translate-x-20 transition-transform">
+                  <div className="w-26 h-26 sm:w-38 sm:h-38 md:w-44 md:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
                     <img
                       src="/images/divine_murugan_relief.jpg"
                       alt="Lord Murugan 3D"
@@ -153,7 +153,7 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
                   </span>
                 </div>
 
-                <div className="text-[11px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center">
+                <div className="text-[11px] sm:text-xs text-amber-200/90 font-serif tracking-widest uppercase font-semibold text-center translate-x-3 sm:translate-x-8 lg:translate-x-14">
                   Divine Eternal Grace
                 </div>
               </div>
@@ -165,7 +165,7 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className={`absolute z-40 max-w-lg mx-4 p-6 sm:p-9 rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-md text-center transition-all ${
+            className={`absolute z-40 max-w-[90vw] sm:max-w-md md:max-w-[460px] mx-auto p-5 sm:p-8 rounded-3xl bg-white/95 border-2 border-[#C49A47] shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-md text-center transition-all ${
               isOpening ? 'scale-110 opacity-0 transition-all duration-1000' : ''
             }`}
           >
