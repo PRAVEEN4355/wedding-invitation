@@ -98,17 +98,16 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
                   卐 Sri Maha Ganapathi 卐
                 </div>
 
-                {/* Golden Ganesha Emblem */}
+                {/* 3D Golden Ganesha 3D Logo */}
                 <div className="relative my-auto flex flex-col items-center">
-                  <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full p-1 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_30px_rgba(245,206,54,0.35)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
-                    <div className="w-full h-full rounded-full bg-gradient-to-b from-[#4A1525] to-[#20070E] flex flex-col items-center justify-center text-center p-2">
-                      <span className="text-4xl sm:text-6xl drop-shadow-md">🕉️</span>
-                      <span className="font-rozha text-[11px] sm:text-xs text-[#F5CE36] tracking-wider mt-1 font-bold">
-                        Vighnaharta
-                      </span>
-                    </div>
+                  <div className="w-28 h-28 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/divine_ganesha_relief.jpg"
+                      alt="Lord Ganesha 3D"
+                      className="w-full h-full object-cover rounded-full filter brightness-105"
+                    />
                   </div>
-                  <span className="mt-3 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-500/50 text-[#F5CE36] text-[10px] sm:text-xs font-serif uppercase tracking-widest font-bold">
+                  <span className="mt-3 px-4 py-1 rounded-full bg-amber-950/85 border border-amber-500/50 text-[#F5CE36] text-[11px] sm:text-xs font-serif uppercase tracking-widest font-bold shadow-md">
                     Subham
                   </span>
                 </div>
@@ -140,17 +139,16 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
                   ✨ Sri Subramanya Swamy ✨
                 </div>
 
-                {/* Golden Murugan Emblem */}
+                {/* 3D Golden Murugan 3D Logo */}
                 <div className="relative my-auto flex flex-col items-center">
-                  <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full p-1 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_30px_rgba(245,206,54,0.35)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
-                    <div className="w-full h-full rounded-full bg-gradient-to-b from-[#4A1525] to-[#20070E] flex flex-col items-center justify-center text-center p-2">
-                      <span className="text-3xl sm:text-5xl drop-shadow-md">🦚</span>
-                      <span className="font-rozha text-[11px] sm:text-xs text-[#F5CE36] tracking-wider mt-1 font-bold">
-                        Vetri Vel
-                      </span>
-                    </div>
+                  <div className="w-28 h-28 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-br from-[#FFE79A] via-[#C49A47] to-[#784A0E] shadow-[0_0_35px_rgba(245,206,54,0.45)] border-2 border-[#FFF0B3] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/divine_murugan_relief.jpg"
+                      alt="Lord Murugan 3D"
+                      className="w-full h-full object-cover rounded-full filter brightness-105"
+                    />
                   </div>
-                  <span className="mt-3 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-500/50 text-[#F5CE36] text-[10px] sm:text-xs font-serif uppercase tracking-widest font-bold">
+                  <span className="mt-3 px-4 py-1 rounded-full bg-amber-950/85 border border-amber-500/50 text-[#F5CE36] text-[11px] sm:text-xs font-serif uppercase tracking-widest font-bold shadow-md">
                     Kalyanam
                   </span>
                 </div>
@@ -227,11 +225,6 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
                 {isOpening ? "Entering Mandapam..." : "OPEN WEDDING INVITATION"}
               </span>
             </button>
-
-            <p className="text-[11px] text-[#633900] mt-3 tracking-wider flex items-center justify-center gap-1.5 font-sans">
-              <span>🎵</span>
-              <span>Tap to enter with Tamil Wedding BGM</span>
-            </p>
           </motion.div>
         </motion.div>
       )}

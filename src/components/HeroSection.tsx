@@ -42,20 +42,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <Sparkles className="w-4 h-4 text-[#C49A47] animate-spin" style={{ animationDuration: '8s' }} />
         </motion.div>
 
-        {/* Divine Blessings of Lord Ganesha & Lord Murugan */}
+        {/* Divine Blessings of Lord Ganesha & Lord Murugan with 3D Logos */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex items-center justify-center space-x-3 sm:space-x-6 mb-4"
         >
-          <div className="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#C49A47] shadow-xs">
-            <span className="text-lg">🕉️</span>
+          <div className="flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#C49A47] shadow-xs">
+            <img
+              src="/images/divine_ganesha_relief.jpg"
+              alt="Lord Ganesha"
+              className="w-6 h-6 rounded-full object-cover border border-[#C49A47]"
+            />
             <span className="font-serif text-xs font-bold text-[#681C32] tracking-wider">Lord Ganesha</span>
           </div>
           <span className="text-[#C49A47] text-xs font-serif font-black">•</span>
-          <div className="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#C49A47] shadow-xs">
-            <span className="text-lg">🦚</span>
+          <div className="flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#C49A47] shadow-xs">
+            <img
+              src="/images/divine_murugan_relief.jpg"
+              alt="Lord Murugan"
+              className="w-6 h-6 rounded-full object-cover border border-[#C49A47]"
+            />
             <span className="font-serif text-xs font-bold text-[#681C32] tracking-wider">Lord Murugan</span>
           </div>
         </motion.div>
