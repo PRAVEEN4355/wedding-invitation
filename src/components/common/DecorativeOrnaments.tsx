@@ -15,25 +15,30 @@ export const AuspiciousDiya: React.FC<{ className?: string }> = ({ className = '
   );
 };
 
-// Traditional Temple Bell with swinging animation
-export const TempleBell: React.FC<{ className?: string; onClick?: () => void }> = ({ className = '', onClick }) => {
+// Traditional Temple Bell with swinging animation and photorealistic brass bell
+export const TempleBell: React.FC<{ 
+  className?: string; 
+  style?: React.CSSProperties; 
+  onClick?: () => void 
+}> = ({ className = '', style, onClick }) => {
   return (
     <div 
       onClick={onClick}
-      className={`relative flex flex-col items-center group cursor-pointer transition-transform hover:scale-105 ${className}`}
-      title="Ring temple bell for blessings"
+      style={style}
+      className={`relative flex flex-col items-center group cursor-pointer transition-transform hover:scale-110 active:scale-95 ${className}`}
+      title="Ring sacred temple bell for blessings"
     >
-      {/* Hanging Chain */}
-      <div className="w-1.5 h-12 bg-gradient-to-b from-amber-800 via-gold to-amber-900 flex flex-col items-center justify-between py-0.5 shadow-sm">
-        <span className="w-2.5 h-1 rounded-full bg-gold-light" />
-        <span className="w-2.5 h-1 rounded-full bg-gold-light" />
-        <span className="w-2.5 h-1 rounded-full bg-gold-light" />
-      </div>
-
-      {/* Bell Dome */}
-      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-b from-gold-antique via-gold-light to-gold-dark rounded-t-full rounded-b-md shadow-lg border border-amber-500/40 flex flex-col items-center justify-end pb-1 animate-bell-swing origin-top">
-        <div className="w-11 sm:w-13 h-2 bg-gradient-to-r from-amber-800 via-gold-shimmer to-amber-900 rounded-full shadow-inner" />
-        <div className="w-2 h-3 bg-amber-950 rounded-b-full -mb-2 shadow" />
+      {/* Photorealistic Swinging Brass Temple Bell */}
+      <div 
+        style={{ transformOrigin: 'top center' }}
+        className="relative animate-bell-swing filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.65)] hover:brightness-110 transition-all"
+      >
+        <img
+          src="/images/realistic_temple_bell.png"
+          alt="Authentic South Indian Brass Temple Bell"
+          className="w-10 h-18 sm:w-14 sm:h-24 md:w-16 md:h-28 object-contain select-none pointer-events-auto"
+          draggable={false}
+        />
       </div>
     </div>
   );

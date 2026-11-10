@@ -67,11 +67,13 @@ export const OpeningTempleDoor: React.FC<OpeningTempleDoorProps> = ({ onOpen }) 
               <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent pointer-events-none" />
             </div>
 
-            {/* Swinging Temple Bells */}
-            <div className="w-full max-w-4xl flex justify-around px-8 -mt-2">
-              <TempleBell onClick={() => weddingAudio.playTempleBell()} />
-              <TempleBell className="hidden sm:flex" onClick={() => weddingAudio.playTempleBell()} />
-              <TempleBell onClick={() => weddingAudio.playTempleBell()} />
+            {/* Realistic Swinging Brass Temple Bells */}
+            <div className="w-full max-w-5xl flex justify-around px-4 sm:px-12 -mt-1 z-30 pointer-events-auto">
+              <TempleBell style={{ animationDelay: '0s', animationDuration: '2.5s' }} onClick={() => weddingAudio.playTempleBell()} />
+              <TempleBell className="hidden md:flex" style={{ animationDelay: '0.5s', animationDuration: '2.8s' }} onClick={() => weddingAudio.playTempleBell()} />
+              <TempleBell className="hidden sm:flex" style={{ animationDelay: '0.2s', animationDuration: '2.3s' }} onClick={() => weddingAudio.playTempleBell()} />
+              <TempleBell className="hidden md:flex" style={{ animationDelay: '0.7s', animationDuration: '2.7s' }} onClick={() => weddingAudio.playTempleBell()} />
+              <TempleBell style={{ animationDelay: '0.4s', animationDuration: '2.4s' }} onClick={() => weddingAudio.playTempleBell()} />
             </div>
           </div>
 
