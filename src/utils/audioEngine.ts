@@ -27,14 +27,24 @@ class TamilMovieWeddingAudio {
   private initAudioElement() {
     if (!this.audioElement && typeof Audio !== 'undefined') {
       this.audioElement = new Audio();
-      this.audioElement.loop = true;
+      this.audioElement.loop = false; // Background music stops once completed (~30-35s)
       this.audioElement.preload = 'auto';
       this.audioElement.volume = this.isMuted ? 0 : this.volume;
       this.audioElement.src = this.TRACK_PATHS[this.currentTrack];
 
+      // Automatically stop and notify UI when the song completes
       this.audioElement.addEventListener('ended', () => {
-        if (this.isPlaying) {
-          this.audioElement?.play().catch(() => {});
+        this.isPlaying = false;
+        this.notify();
+      });
+
+      // Stop once ~35 seconds mark is reached for clean closure
+      this.audioElement.addEventListener('timeupdate', () => {
+        if (this.audioElement && this.isPlaying) {
+          // If track reaches 35 seconds or finishes, stop cleanly
+          if (this.audioElement.currentTime >= 35 && this.currentTrack === 'traditional' && !this.customAudioUrl) {
+            this.stop();
+          }
         }
       });
 
@@ -120,6 +130,11 @@ class TamilMovieWeddingAudio {
         this.audioElement.src = this.TRACK_PATHS[this.currentTrack];
         this.audioElement.load();
       }
+    }
+
+    // If track previously finished or reached end, restart from beginning
+    if (this.audioElement.ended || this.audioElement.currentTime >= 34) {
+      this.audioElement.currentTime = 0;
     }
 
     this.audioElement.volume = this.isMuted ? 0 : this.volume;
